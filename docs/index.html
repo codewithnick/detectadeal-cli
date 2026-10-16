@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>detectadeal CLI: Amazon India and Flipkart price drops, price history and coupon codes from the terminal</title>
+  <meta name="description" content="Open-source command-line price tracker for India. Today's Amazon India and Flipkart price drops, deal search across 250+ stores, coupon codes and price-watch alerts, each linked to its price history on detectadeal.com." />
+  <link rel="canonical" href="https://codewithnick.github.io/detectadeal-cli/" />
+  <meta property="og:title" content="detectadeal CLI: price drops, price history and coupons for Indian online shopping" />
+  <meta property="og:description" content="npx detectadeal drops. Amazon India, Flipkart, Myntra and 250+ stores in your terminal, with price history links." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://codewithnick.github.io/detectadeal-cli/" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "detectadeal CLI",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "macOS, Linux, Windows",
+    "description": "Command-line price tracker for India: Amazon India and Flipkart price drops, deal search, coupon codes and price-watch alerts, linked to price history on detectadeal.com.",
+    "url": "https://codewithnick.github.io/detectadeal-cli/",
+    "downloadUrl": "https://www.npmjs.com/package/detectadeal",
+    "softwareVersion": "0.1.0",
+    "license": "https://opensource.org/licenses/MIT",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+    "publisher": { "@type": "Organization", "name": "detectadeal", "url": "https://www.detectadeal.com" }
+  }
+  </script>
+  <style>
+    :root { --bg:#ffffff; --fg:#1a1a1a; --muted:#555; --accent:#f97316; --code:#f4f4f5; --line:#e5e7eb; }
+    @media (prefers-color-scheme: dark) { :root { --bg:#0f1115; --fg:#e8e8e8; --muted:#a3a3a3; --code:#1b1f27; --line:#2a2f3a; } }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+    main { max-width: 820px; margin: 0 auto; padding: 32px 16px 64px; }
+    h1 { font-size: 1.9rem; line-height: 1.25; margin: 0 0 12px; }
+    h2 { font-size: 1.3rem; margin: 40px 0 12px; border-bottom: 1px solid var(--line); padding-bottom: 6px; }
+    p.lead { font-size: 1.1rem; color: var(--muted); }
+    pre { background: var(--code); padding: 14px 16px; border-radius: 8px; overflow-x: auto; font-size: 0.9rem; }
+    code { background: var(--code); padding: 1px 5px; border-radius: 4px; font-size: 0.92em; }
+    pre code { background: none; padding: 0; }
+    a { color: var(--accent); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+    td, th { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    ul.links { columns: 2; gap: 24px; padding-left: 18px; }
+    @media (max-width: 600px) { ul.links { columns: 1; } }
+    .badges a { margin-right: 6px; }
+    footer { margin-top: 48px; color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--line); padding-top: 16px; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>detectadeal CLI: Amazon India and Flipkart price drops, price history and coupon codes from the terminal</h1>
+  <p class="lead">An open-source price tracker for Indian online shopping. One command shows today's biggest price drops across Amazon India, Flipkart, Myntra, Ajio, Croma, Nykaa, JioMart and 250+ stores. Every result links to its <a href="https://www.detectadeal.com">price history on detectadeal.com</a>, so you can tell a real discount from a marked-up list price.</p>
+  <p class="badges">
+    <a href="https://github.com/codewithnick/detectadeal-cli">GitHub</a> ·
+    <a href="https://www.npmjs.com/package/detectadeal">npm</a> ·
+    <a href="https://github.com/codewithnick/detectadeal-cli/blob/main/DATA-TERMS.md">Deal data terms</a>
+  </p>
+
+<pre><code>$ npx detectadeal search wireless earbuds -n 3 --max-price 2000
+
+    Price   Off  Store      Deal                                              Price history
+---------  ----  ---------  ------------------------------------------------  --------------------------------------------
+     ₹300   81%  Flipkart   allons TWS Bluetooth Earbuds True Wireless Head…  https://www.detectadeal.com/p/ACCHFYEJ73HY6DCC
+     ₹458   85%  Flipkart   Caidea TW500 Tube Upto 50H Playtime*, ENC, Fast…  https://www.detectadeal.com/p/ACCHEJXCXZ4PEWPW
+
+More results and price history: https://www.detectadeal.com/search/wireless%20earbuds</code></pre>
+
+  <h2>Install</h2>
+  <p>Needs Node.js 18 or newer.</p>
+<pre><code>npm install -g detectadeal
+detectadeal --help</code></pre>
+
+  <h2>Commands</h2>
+  <table>
+    <tr><th>Command</th><th>What it does</th></tr>
+    <tr><td><code>detectadeal drops</code></td><td>Today's biggest price drops. Same data as <a href="https://www.detectadeal.com/deals/price-drops">Price Drops on detectadeal</a>.</td></tr>
+    <tr><td><code>detectadeal search tws earbuds -p 1500</code></td><td>Search deals across stores, with a max price.</td></tr>
+    <tr><td><code>detectadeal deals -c mobiles -d 30</code></td><td>Browse a category with a minimum discount. See <a href="https://www.detectadeal.com/deals/mobiles">mobile deals</a>.</td></tr>
+    <tr><td><code>detectadeal coupons myntra --codes-only</code></td><td>Active coupon codes. Full list at <a href="https://www.detectadeal.com/offers">detectadeal offers</a>.</td></tr>
+    <tr><td><code>detectadeal categories</code></td><td>All deal categories with live counts.</td></tr>
+    <tr><td><code>detectadeal watch iphone 15 -b 55000</code></td><td>Poll a search and print deals at or below your price. For push alerts use <a href="https://www.detectadeal.com/how-it-works">detectadeal price alerts</a>.</td></tr>
+    <tr><td><code>--json</code></td><td>Machine-readable output on every command.</td></tr>
+  </table>
+
+  <h2>Why price history matters</h2>
+  <p>Indian sale events, from Big Billion Days and the Great Indian Festival to Diwali and Prime Day, are full of discounts measured against inflated list prices. A price history chart shows the real lowest price of the last months, so you know whether to buy now or wait. The CLI gives you the list; the <a href="https://www.detectadeal.com/deals">detectadeal deal pages</a> give you the chart, the lowest-ever price, similar deals and a one-click price alert.</p>
+  <ul class="links">
+    <li><a href="https://www.detectadeal.com/blogs/amazon-price-history-feature-spot-fake-discounts">Amazon price history: spotting fake discounts</a></li>
+    <li><a href="https://www.detectadeal.com/blogs/ultimate-guide-price-tracking">The ultimate guide to price tracking in India</a></li>
+    <li><a href="https://www.detectadeal.com/blogs/best-time-to-buy-amazon-flipkart-india-timing">Best time to buy on Amazon and Flipkart</a></li>
+    <li><a href="https://www.detectadeal.com/blogs/how-to-set-price-alert-amazon-flipkart-detectadeal">How to set a price alert for Amazon and Flipkart</a></li>
+    <li><a href="https://www.detectadeal.com/blogs/big-billion-days-vs-great-indian-festival-which-is-better">Big Billion Days vs Great Indian Festival</a></li>
+    <li><a href="https://www.detectadeal.com/blogs/what-are-price-glitches-and-how-to-look-for-them">Price glitches and how to find them</a></li>
+    <li><a href="https://www.detectadeal.com/blogs/is-only-2-left-in-stock-real-amazon-flipkart">Is "only 2 left in stock" real?</a></li>
+    <li><a href="https://www.detectadeal.com/blogs/no-cost-emi-india-hidden-charges-truth">No-cost EMI: the hidden charges</a></li>
+  </ul>
+
+  <h2>About detectadeal</h2>
+  <p><a href="https://www.detectadeal.com">detectadeal.com</a> is a free deal finder and price tracker for Indian online shopping. It tracks prices across Amazon India, Flipkart, Myntra, Ajio, Nykaa, Croma, JioMart, Meesho, Tata CLiQ and hundreds more, and gives every product a price history, a real-discount check and free price-drop alerts. There is a <a href="https://t.me/detect_a_deal">Telegram channel</a> and an <a href="https://play.google.com/store/apps/details?id=com.detectadeal">Android app</a>.</p>
+  <ul class="links">
+    <li><a href="https://www.detectadeal.com/deals/price-drops">Price drops</a></li>
+    <li><a href="https://www.detectadeal.com/deals/trending">Trending deals</a></li>
+    <li><a href="https://www.detectadeal.com/offers">Coupons and store offers</a></li>
+    <li><a href="https://www.detectadeal.com/stores">Deals by store</a></li>
+    <li><a href="https://www.detectadeal.com/brands">Deals by brand</a></li>
+    <li><a href="https://www.detectadeal.com/deals/electronics">Electronics deals</a></li>
+    <li><a href="https://www.detectadeal.com/deals/mobiles">Mobile phone deals</a></li>
+    <li><a href="https://www.detectadeal.com/deals/computers">Laptop and computer deals</a></li>
+    <li><a href="https://www.detectadeal.com/deals/audio">Headphones and audio deals</a></li>
+    <li><a href="https://www.detectadeal.com/deals/home">Home and kitchen deals</a></li>
+    <li><a href="https://www.detectadeal.com/deals/fashion">Fashion deals</a></li>
+    <li><a href="https://www.detectadeal.com/deals/footwear">Footwear deals</a></li>
+    <li><a href="https://www.detectadeal.com/deals/health">Health deals</a></li>
+    <li><a href="https://www.detectadeal.com/deals/books">Book deals</a></li>
+    <li><a href="https://www.detectadeal.com/deals/gaming">Gaming deals</a></li>
+    <li><a href="https://www.detectadeal.com/how-it-works">How price alerts work</a></li>
+  </ul>
+
+  <h2>Licence and data terms</h2>
+  <p>The code is <a href="https://github.com/codewithnick/detectadeal-cli/blob/main/LICENSE">MIT</a>. The deal data is owned by detectadeal and licensed only under the <a href="https://github.com/codewithnick/detectadeal-cli/blob/main/DATA-TERMS.md">deal data terms</a>: personal use is fine, credit detectadeal.com, keep the affiliate links exactly as returned, and do not redistribute the data as a dataset or feed.</p>
+
+  <footer>Deals and price history by <a href="https://www.detectadeal.com">detectadeal.com</a>. Source on <a href="https://github.com/codewithnick/detectadeal-cli">GitHub</a>.</footer>
+</main>
+</body>
+</html>

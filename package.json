@@ -1,0 +1,58 @@
+{
+  "name": "detectadeal",
+  "version": "0.1.0",
+  "description": "Command-line client for detectadeal.com: today's price drops, deal search, coupon codes and price-watch alerts for Amazon, Flipkart, Myntra and other Indian stores.",
+  "keywords": [
+    "deals",
+    "price-tracker",
+    "price-history",
+    "price-drop",
+    "coupons",
+    "amazon-india",
+    "flipkart",
+    "myntra",
+    "india",
+    "cli",
+    "detectadeal"
+  ],
+  "homepage": "https://www.detectadeal.com",
+  "bugs": {
+    "url": "https://github.com/codewithnick/detectadeal-cli/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codewithnick/detectadeal-cli.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "detectadeal",
+    "url": "https://www.detectadeal.com"
+  },
+  "type": "module",
+  "bin": {
+    "detectadeal": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/index.ts",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "dependencies": {
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}
